@@ -1,0 +1,43 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="pvp-game">
+  <template>
+    <style>
+      :host {
+        display: block;
+
+      }
+      paper-spinner {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+      }
+    </style>
+    <template is="dom-if" if={{!tokenAndAuthenticated}}>
+        <paper-spinner active></paper-spinner>
+    </template>
+    <template is="dom-if" if={{tokenAndAuthenticated}}>
+      <template is="dom-if" if="{{hash.root}}">
+        <join-or-list-battles></join-or-list-battles>
+      </template>
+      <template is="dom-if" if="{{hash.battles}}">
+        <shoot-battles></shoot-battles>
+      </template>
+      <template is="dom-if" if="{{hash.battle}}">
+        <pvp-battle id="[[battleId]]"></pvp-battle>
+      </template>
+    </template>
+  </template>
+  <script src="pvp-game.js">
+  </script>
+</dom-module>

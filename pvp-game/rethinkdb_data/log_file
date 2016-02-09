@@ -1,0 +1,60 @@
+2016-01-29T23:04:23.245145000 0.418948s notice: Recursively removing directory /Users/emilsandin/Documents/workspace/git/killemall2/rethinkdb_data/tmp
+2016-01-29T23:04:23.246965000 0.420772s notice: Initializing directory /Users/emilsandin/Documents/workspace/git/killemall2/rethinkdb_data
+2016-01-29T23:04:23.247076000 0.420879s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/emilsandin/Documents/workspace/git/killemall2/rethinkdb_data' did not already exist or is empty.)
+2016-01-29T23:04:23.247107000 0.420910s notice: Running rethinkdb 2.2.1 (CLANG 4.2 (clang-425.0.28))...
+2016-01-29T23:04:23.252550000 0.426354s notice: Running on Darwin 15.0.0 x86_64
+2016-01-29T23:04:23.252614000 0.426417s notice: Loading data from directory /Users/emilsandin/Documents/workspace/git/killemall2/rethinkdb_data
+2016-01-29T23:04:23.416000000 0.589803s info: Automatically using cache size of 1865 MB
+2016-01-29T23:04:23.417007000 0.590810s error: TCP socket creation failed for port 29015: Address already in use.
+2016-01-30T20:57:12.549022000 0.773367s notice: Running rethinkdb 2.2.1 (CLANG 4.2 (clang-425.0.28))...
+2016-01-30T20:57:12.563675000 0.788018s notice: Running on Darwin 15.0.0 x86_64
+2016-01-30T20:57:12.563722000 0.788064s notice: Loading data from directory /Users/emilsandin/Documents/workspace/git/killemall2/rethinkdb_data
+2016-01-30T20:57:12.601547000 0.825889s info: Automatically using cache size of 3652 MB
+2016-01-30T20:57:12.602333000 0.826674s error: TCP socket creation failed for port 29015: Address already in use.
+2016-01-30T20:58:06.374763000 0.418066s notice: Running rethinkdb 2.2.1 (CLANG 4.2 (clang-425.0.28))...
+2016-01-30T20:58:06.379594000 0.422892s notice: Running on Darwin 15.0.0 x86_64
+2016-01-30T20:58:06.379637000 0.422934s notice: Loading data from directory /Users/emilsandin/Documents/workspace/git/killemall2/rethinkdb_data
+2016-01-30T20:58:06.512037000 0.555334s info: Automatically using cache size of 3074 MB
+2016-01-30T20:58:06.512388000 0.555685s notice: Listening for intracluster connections on port 29015
+2016-01-30T20:58:06.513520000 0.556817s notice: Listening for client driver connections on port 28015
+2016-01-30T20:58:06.513619000 0.556916s notice: Listening for administrative HTTP connections on port 8080
+2016-01-30T20:58:06.513624000 0.556920s notice: Listening on addresses: 127.0.0.1, ::1
+2016-01-30T20:58:06.513624001 0.556921s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-01-30T20:58:06.513627000 0.556923s notice: Server ready, "EmilSandinsMBP_oa2" 11b2444d-8cd6-42d4-b15d-3729a47147d9
+2016-01-30T20:58:07.653170000 1.696467s notice: A newer version of the RethinkDB server is available: 2.2.3-1. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2016-01-30T20:58:17.178888000 11.222340s notice: Server got SIGINT from pid 85938, uid 501; shutting down...
+2016-01-30T20:58:17.179106000 11.222558s notice: Shutting down client connections...
+2016-01-30T20:58:17.179240000 11.222692s notice: All client connections closed.
+2016-01-30T20:58:17.179246000 11.222698s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-01-30T20:58:17.179621000 11.223073s notice: Storage engine shut down.
+2016-01-30T20:58:28.122845000 0.004604s notice: Running rethinkdb 2.2.1 (CLANG 4.2 (clang-425.0.28))...
+2016-01-30T20:58:28.127187000 0.008943s notice: Running on Darwin 15.0.0 x86_64
+2016-01-30T20:58:28.127246000 0.009001s notice: Loading data from directory /Users/emilsandin/Documents/workspace/git/killemall2/rethinkdb_data
+2016-01-30T20:58:28.235264000 0.117050s info: Automatically using cache size of 3027 MB
+2016-01-30T20:58:28.236085000 0.117871s error: TCP socket creation failed for port 29015: Address already in use.
+2016-01-30T21:43:41.565873000 0.417024s notice: Running rethinkdb 2.2.1 (CLANG 4.2 (clang-425.0.28))...
+2016-01-30T21:43:41.571561000 0.422708s notice: Running on Darwin 15.0.0 x86_64
+2016-01-30T21:43:41.571640000 0.422786s notice: Loading data from directory /Users/emilsandin/Documents/workspace/git/killemall2/rethinkdb_data
+2016-01-30T21:43:41.672802000 0.523948s info: Automatically using cache size of 2712 MB
+2016-01-30T21:43:41.675711000 0.526857s error: TCP socket creation failed for port 29015: Address already in use.
+2016-01-30T21:54:51.226871000 0.687629s notice: Running rethinkdb 2.2.1 (CLANG 4.2 (clang-425.0.28))...
+2016-01-30T21:54:51.231209000 0.691965s notice: Running on Darwin 15.0.0 x86_64
+2016-01-30T21:54:51.231273000 0.692027s notice: Loading data from directory /Users/emilsandin/Documents/workspace/git/killemall2/rethinkdb_data
+2016-01-30T21:54:51.276510000 0.737265s info: Automatically using cache size of 2735 MB
+2016-01-30T21:54:51.277284000 0.738039s error: TCP socket creation failed for port 29015: Address already in use.
+2016-01-30T22:00:55.973015000 0.803908s notice: Running rethinkdb 2.2.1 (CLANG 4.2 (clang-425.0.28))...
+2016-01-30T22:00:55.976587000 0.807477s notice: Running on Darwin 15.0.0 x86_64
+2016-01-30T22:00:55.976636000 0.807525s notice: Loading data from directory /Users/emilsandin/Documents/workspace/git/killemall2/rethinkdb_data
+2016-01-30T22:00:56.018586000 0.849475s info: Automatically using cache size of 4700 MB
+2016-01-30T22:00:56.018914000 0.849803s notice: Listening for intracluster connections on port 29015
+2016-01-30T22:00:56.020494000 0.851384s notice: Listening for client driver connections on port 28015
+2016-01-30T22:00:56.020622000 0.851511s notice: Listening for administrative HTTP connections on port 8080
+2016-01-30T22:00:56.020627000 0.851516s notice: Listening on addresses: 127.0.0.1, ::1
+2016-01-30T22:00:56.020627001 0.851516s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-01-30T22:00:56.020629000 0.851519s notice: Server ready, "EmilSandinsMBP_oa2" 11b2444d-8cd6-42d4-b15d-3729a47147d9
+2016-01-30T22:00:57.031623000 1.862544s notice: A newer version of the RethinkDB server is available: 2.2.3-1. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2016-01-30T22:01:23.958190000 28.789890s notice: Server got SIGINT from pid 305, uid 501; shutting down...
+2016-01-30T22:01:23.958431000 28.790130s notice: Shutting down client connections...
+2016-01-30T22:01:23.958511000 28.790210s notice: All client connections closed.
+2016-01-30T22:01:23.958517000 28.790216s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-01-30T22:01:23.965589000 28.797289s notice: Storage engine shut down.

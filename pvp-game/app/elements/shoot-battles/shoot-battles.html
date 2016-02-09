@@ -1,0 +1,143 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="shoot-battles">
+  <template>
+    <style>
+    iron-list {
+        background-color: var(--paper-grey-200, #eee);
+        padding-top: 1px;
+        padding-bottom: 16px;
+        --iron-list-items-container: {
+          max-width: 800px;
+          margin: auto;
+          margin-top: 60px;
+          margin-bottom: 60px;
+          border-bottom: 1px solid #ddd;
+        };
+      }
+      iron-list .item {
+        @apply(--layout-horizontal);
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      iron-list .item:focus {
+        outline: 0;
+        border-color: #666;
+      }
+      iron-list .avatar {
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        background-color: #DDD;
+      }
+      iron-list .pad {
+        padding: 0 16px;
+        @apply(--layout-flex);
+        @apply(--layout-vertical);
+      }
+      iron-list .primary {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      iron-list .shortText, .longText {
+        font-size: 14px;
+      }
+      iron-list .longText {
+        color: gray;
+        display: none;
+      }
+      iron-list .item:hover .shortText::after {
+        content: ' [+]';
+        color: gray;
+      }
+      iron-list .item.expanded:hover .shortText::after {
+        content: '';
+      }
+      iron-list .item.expanded .longText {
+        display: block;
+      }
+      iron-list .item.expanded:hover .longText::after {
+        content: ' [–]';
+      }
+      :host {
+        display: block;
+      }
+      input {
+        height: 29px;
+        font-size: 1.2em;
+        text-align: right;
+      }
+    </style>
+    <div>
+      <template is="dom-if" if="[[showNewBattle]]">
+        <paper-toolbar>
+        <iron-icon on-tap="hideNewBattle" icon="close"></iron-icon>
+          <div>Battle ends on</div>
+        </paper-toolbar>
+
+        <iron-pages selected="[[showPage]]">
+          <div>
+            <pk-datepicker>
+              <fa-awesome prev-month icon="fa:chevron-left"><iron-icon icon="chevron-left"></iron-icon></fa-awesome>
+              <fa-awesome next-month icon="fa:chevron-right"><iron-icon icon="chevron-right"></iron-icon></fa-awesome>
+              <fa-awesome prev-year icon="fa:chevron-left"><iron-icon icon="chevron-left"></iron-icon></fa-awesome>
+              <fa-awesome next-year icon="fa:chevron-right"><iron-icon icon="chevron-right"></iron-icon></fa-awesome>
+              <fa-awesome go-selected icon="fa:dot-circle-o"></fa-awesome>
+              <fa-awesome go-today icon="fa:calendar"></fa-awesome>
+            </pk-datepicker>
+
+          </div>
+          <div>
+            <pk-timepicker></pk-timepicker>
+          </div>
+          <div>Three</div>
+        </iron-pages>
+      </template>
+      <template is="dom-if" if="[[!showNewBattle]]">
+        <paper-button raised on-click="new3minBattle">
+          <iron-icon icon="add"></iron-icon>
+          New 3 min battle
+        </paper-button>
+        <paper-button raised on-click="newBattle">
+          <iron-icon icon="add"></iron-icon>
+          New...
+        </paper-button>
+        <template is="dom-if" if="[[restApi]]">
+          <iron-ajax url="{{restApi}}/battle" last-response="{{battles}}" on-response="formatTimes" auto></iron-ajax>
+          <iron-list id="list" items="[[battles]]" as="item">
+            <template>
+              <div on-tap="_collapseExpand">
+                <div class$="item [[getClassForItem(item, item.expanded)]]" tabindex="0">
+                  <img class="avatar" src="[[item.image]]">
+                  <div class="pad">
+                    <div class="primary">[[item.users.0.name]]</div>
+                    <div class="shortText">short text</div>
+                    <div class="longText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                  </div>
+                  <div>Ends: {{item._battleEnds}}</div>
+                  <iron-icon icon="exit-to-app" on-tap="joinBattle" data-item={{item}}></iron-icon>
+                </div>
+              </div>
+            </template>
+          </iron-list>
+        </template>
+      </template>
+    </div>
+  </template>
+  <script src="shoot-battles.js">
+  </script>
+</dom-module>
