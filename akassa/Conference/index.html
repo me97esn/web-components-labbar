@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script>
+	var proto = Object.create(HTMLElement.prototype, {});
+	proto.createdCallback = function() {
+		var t = document.querySelector('#tmpl1');
+		var clone = document.importNode(t.content, true);
+		this.appendChild(clone);
+	}
+	document.registerElement('x-foo', {prototype: proto});
+	</script>	
+	<title>IT-Huset Web components</title>
+</head>
+
+<body>
+
+	<template id="tmpl1">
+		<p>hello.</p>
+	</template>
+	<x-foo></x-foo>
+
+</body>
+
+</html>
